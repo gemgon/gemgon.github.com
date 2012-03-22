@@ -29,13 +29,50 @@ body{
   margin-bottom:5px; 
   border-bottom:1px solid #F3A22A;
 }
+.main p{
+  width:90%;
+  margin-bottom:10px;   
+}
+.aside h2{
+  font:bold 1.375em Arial, sans-serif; /*22px/16px*/;
+  margin-bottom:5px;
+}
+.aside .skills ul li {
+    overflow:hidden;
+    height:28px;
+    line-height:28px;
+}
+.aside .skills ul li img {
+    float: right;
+    clear:right;
+}
+.aside .skills ul li img.small{
+    margin-right:30px;
+   /* margin-right:16.190476190476190476%;*/ /*34px/210px */
+}
+.aside .last{
+  margin-bottom:10px;  
+}
+.aside .links li{
+  display:inline;
+}
+.footer{
+  clear:both;
+}
+.footer p{
+  text-align:center;
+  font:normal .625em Arial, sans-serif; /*10px/16px*/ ;
+  color:#221606;
+}
 a{
   color:#A66300;
 }
+
+
 /* Smart phone e iphone
 ------------------------------------------------------------------------ */
 
-@media screen and (max-width: 679px) {
+@media only screen and (max-width: 679px) {
   body{
     background-image: url(../img/background_2.png);
   }
@@ -59,10 +96,13 @@ a{
     font:normal 1.125em Arial, sans-serif; /*18px/16px*/
   }  
   .main p{
-    width:90%; /*460px/504px*/
-    font:normal .75em Arial, sans-serif; /*12px/16px*/ 
-    margin-bottom:10px;   
+    font:normal .75em Arial, sans-serif; /*12px/16px*/    
   }
+  .aside{ 
+    margin-bottom:20px;
+  }
+
+
 }
 /* Desktop y tablets
 ------------------------------------------------------------------------ */
@@ -108,48 +148,14 @@ a{
     font:normal 1.125em Arial, sans-serif; /*18px/16px*/
   }
   .main p{
-    width:91.2698413%; /*460px/504px*/
-    font:normal .75em Arial, sans-serif; /*12px/16px*/ 
-    margin-bottom:10px;   
+    font:normal .75em Arial, sans-serif; /*12px/16px*/   
   }
   .aside{
     float:right;
-  /*  width:25.609756097560975609%;*/  /*210px/820px*/
     width:31.707317073170731707%;  /*260px/820px*/  
-  /*  width:37.804878048780487804%;*/  /*310px/820px*/
     margin-bottom:30px;
-  /*  border:1px solid red; */ 
   }
-  .aside h2{
-    margin-bottom:5px;
-  }
-  .aside .skills ul li {
-      overflow:hidden;
-      height:28px;
-      line-height:28px;
-  }
-  .aside .skills ul li img {
-      float: right;
-      clear:right;
-  }
-  .aside .skills ul li img.small{
-      margin-right:30px;
-     /* margin-right:16.190476190476190476%;*/ /*34px/210px */
-  }
-  .aside .last{
-    margin-bottom:10px;  
-  }
-  .aside .links li{
-    display:inline;
-  }
-  .footer{
-    clear:both;
-  }
-  .footer p{
-    text-align:center;
-    font:normal .625em Arial, sans-serif; /*10px/16px*/ ;
-    color:#221606;
-  }
+
 
 }
 
