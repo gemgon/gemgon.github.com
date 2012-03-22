@@ -1,0 +1,167 @@
+/*reset inicial*/
+
+body,h1,h2,h3,ul,li,a,img,p,div,label,input,table,tr,td{
+  padding:0;
+  margin:0;
+}
+body{
+  font-size:100%;
+  font-family:"Helvetica", "MS Trebuchet", sans-serif;
+}
+a{
+  text-decoration:none;
+  color:#272727;
+}
+li{list-style-type:none;}
+
+/*maquetando*/
+
+/* General Styles
+------------------------------------------------------------------------ */
+body{
+  background-repeat: repeat-x;
+}
+.header{
+  padding-bottom:10px;
+}
+.main h2{
+  width:90%;
+  margin-bottom:5px; 
+  border-bottom:1px solid #F3A22A;
+}
+a{
+  color:#A66300;
+}
+/* Smart phone e iphone
+------------------------------------------------------------------------ */
+
+@media screen and (max-width: 679px) {
+  body{
+    background-image: url(../img/background_2.png);
+  }
+  #wrapper{
+    margin:10px auto;
+    width:90%;
+  }
+  .header{
+    margin-bottom:20px;
+  }
+  h1{
+    font:normal 2.25em Georgia, serif; /*36px/16px*/
+  }  
+  .header h2{
+    font:italic 1.5em Georgia, serif; /*24px/16px*/ 
+  }  
+  .main{
+    margin-bottom:20px;
+  }
+  .main h2{
+    font:normal 1.125em Arial, sans-serif; /*18px/16px*/
+  }  
+  .main p{
+    width:90%; /*460px/504px*/
+    font:normal .75em Arial, sans-serif; /*12px/16px*/ 
+    margin-bottom:10px;   
+  }
+}
+/* Desktop y tablets
+------------------------------------------------------------------------ */
+
+@media screen and (min-width: 680px) {
+  
+  body{
+    background-image: url(../img/background.png);
+  }
+
+  #wrapper{
+    margin:30px auto;
+    width:70%;
+  }
+  .header{
+    margin-bottom:30px;
+    overflow:hidden;
+  }
+  .logo{
+    float:left;
+  }
+  h1{
+    font:normal 2.625em Georgia, serif; /*42px/16px*/
+  }
+  .header h2{
+    font:italic 1.5em Georgia, serif; /*24px/16px*/ 
+  }
+  .contact{
+    float:right;
+    margin-top:55px;
+  }
+  .page{
+    clear:both;
+    overflow:hidden;
+    width:100%;
+  }
+  .main{
+    float:left;
+    width:61.4634146%;  /*504px/820px*/
+    margin-bottom:30px;
+  }
+  .main h2{
+    font:normal 1.125em Arial, sans-serif; /*18px/16px*/
+  }
+  .main p{
+    width:91.2698413%; /*460px/504px*/
+    font:normal .75em Arial, sans-serif; /*12px/16px*/ 
+    margin-bottom:10px;   
+  }
+  .aside{
+    float:right;
+  /*  width:25.609756097560975609%;*/  /*210px/820px*/
+    width:31.707317073170731707%;  /*260px/820px*/  
+  /*  width:37.804878048780487804%;*/  /*310px/820px*/
+    margin-bottom:30px;
+  /*  border:1px solid red; */ 
+  }
+  .aside h2{
+    margin-bottom:5px;
+  }
+  .aside .skills ul li {
+      overflow:hidden;
+      height:28px;
+      line-height:28px;
+  }
+  .aside .skills ul li img {
+      float: right;
+      clear:right;
+  }
+  .aside .skills ul li img.small{
+      margin-right:30px;
+     /* margin-right:16.190476190476190476%;*/ /*34px/210px */
+  }
+  .aside .last{
+    margin-bottom:10px;  
+  }
+  .aside .links li{
+    display:inline;
+  }
+  .footer{
+    clear:both;
+  }
+  .footer p{
+    text-align:center;
+    font:normal .625em Arial, sans-serif; /*10px/16px*/ ;
+    color:#221606;
+  }
+
+}
+
+/* Large Screens
+------------------------------------------------------------------------ */
+
+@media screen and (min-width: 1152px) {
+  #wrapper {
+    width: 800px;
+    }
+  .aside {
+    width:210px;
+  }
+}
+
