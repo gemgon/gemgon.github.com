@@ -61,7 +61,7 @@ body{
 }
 .footer p{
   text-align:center;
-  font:normal .625em Arial, sans-serif; /*10px/16px*/ ;
+  font:normal .75em Arial, sans-serif; /*12px/16px*/ ;
   color:#221606;
 }
 a{
@@ -155,10 +155,10 @@ a{
     margin-bottom:30px;
   }
   .main h2{
-    font:normal 1.125em Arial, sans-serif; /*18px/16px*/
+    font:normal 1.25em Arial, sans-serif; /*20px/16px*/
   }
   .main p{
-    font:normal .75em Arial, sans-serif; /*12px/16px*/   
+    font:normal .875em Arial, sans-serif; /*14px/16px*/   
   }
   .aside{
     float:right;
