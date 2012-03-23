@@ -68,11 +68,18 @@ a{
   color:#A66300;
 }
 
+/* smartphone e iphone portrait
+------------------------------------------------------------------------ */
+@media only screen and (max-width: 449px) {
+  .skills{
+    width:180px;
+  } 
+}
 
-/* Smart phone e iphone
+/* smartphone e iphone landscape
 ------------------------------------------------------------------------ */
 
-@media only screen and (max-width: 679px) {
+@media only screen and (min-width: 450px) and (max-width: 679px) {
   body{
     background-image: url(../img/background_2.png);
   }
@@ -87,7 +94,7 @@ a{
     font:normal 2.25em Georgia, serif; /*36px/16px*/
   }  
   .header h2{
-    font:italic 1.5em Georgia, serif; /*24px/16px*/ 
+    font:italic 1.375em Georgia, serif; /*22px/16px*/ 
   }  
   .main{
     margin-bottom:20px;
@@ -100,6 +107,9 @@ a{
   }
   .aside{ 
     margin-bottom:20px;
+  }
+  .skills{
+    width:40%;
   }
 
 
