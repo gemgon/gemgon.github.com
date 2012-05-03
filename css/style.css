@@ -38,13 +38,13 @@ body{
   margin-bottom:5px;
 }
 .aside .skills ul li {
-    overflow:hidden;
-    height:28px;
-    line-height:28px;
+  overflow:hidden;
+  height:28px;
+  line-height:28px;
 }
 .aside .skills ul li img {
-    float: right;
-    clear:right;
+  float: right;
+  clear:right;
 }
 .aside .skills ul li img.small{
     margin-right:30px;
@@ -70,9 +70,9 @@ a{
 
 /* smartphone e iphone portrait
 ------------------------------------------------------------------------ */
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 360px) {
   .skills{
-    width:180px;
+    width:50%;
   } 
 }
 
