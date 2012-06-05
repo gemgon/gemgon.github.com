@@ -51,7 +51,7 @@ body{
   /* margin-right:16.190476190476190476%;*/ /*34px/210px */
 }
 .aside .last{
-  margin-bottom:10px;  
+  margin-bottom:20px;  
 }
 .aside .links li{
   display:inline;
@@ -67,9 +67,6 @@ body{
 a{
   color:#A66300;
 }
-
-/* smartphone e iphone portrait
------------------------------------------------------------------------- */
 
 
 /* smartphone e iphone landscape
@@ -105,7 +102,7 @@ a{
     margin-bottom:20px;
   }
   .skills{
-    width:45%;
+    width:50%;
   }
 
 
