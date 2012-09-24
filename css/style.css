@@ -140,10 +140,17 @@ a{
     font:bold 1.375em Arial, sans-serif; /*22px/16px*/
   }
   .skills{
-    width:40%;
+    width:30%;
   }  
   .footer{margin-top:20px;}
 }
+
+/*Ajuste para .skills en pantallas pequeñas
+-------------------------------------------------------------------------*/
+@media only screen and (max-width: 530px){
+  .skills{width:45%;}
+}
+
 /* Desktop y tablets
 ------------------------------------------------------------------------ */
 
