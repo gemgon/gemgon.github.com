@@ -148,7 +148,7 @@ a{
 /*Ajuste para .skills en pantallas pequeñas
 -------------------------------------------------------------------------*/
 @media only screen and (max-width: 530px){
-  .skills{width:45%;}
+  .skills{width:46%;}
 }
 
 /* Desktop y tablets
