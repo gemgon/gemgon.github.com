@@ -6,7 +6,8 @@ body,h1,h2,h3,h4,ul,li,a,img,p,div,label,input,table,tr,td{
 }
 body{
   font-size:100%;
-  font-family:"Helvetica", "MS Trebuchet", sans-serif;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 a{
   text-decoration:none;
