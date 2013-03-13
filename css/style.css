@@ -131,7 +131,7 @@ a{
     font:italic 1.375em "adelle", Georgia, serif; /*22px/16px*/ 
   }  
   .page h2{
-    font:normal 1.125em Arial, sans-serif; /*18px/16px*/
+    font:normal 1.125em "adelle", Arial, sans-serif; /*18px/16px*/
     line-height: 1.22222222222222222222em; /*22px/18px*/
   }
   .page p{
@@ -142,7 +142,7 @@ a{
     margin-bottom:20px;
   }
   .aside h2{
-    font:bold 1.375em Arial, sans-serif; /*22px/16px*/
+    font:bold 1.375em "adelle", Arial, sans-serif; /*22px/16px*/
   }
   .skills{
     width:30%;
@@ -200,7 +200,7 @@ a{
     width:61.4634146%;  /*504px/820px*/
   }
   .page h2{
-    font:normal 1.25em Arial, sans-serif; /*20px/16px*/
+    font:normal 1.25em "adelle", Arial, sans-serif; /*20px/16px*/
     line-height:1.2em; /*24px/20px*/ 
   }
   .page p{
@@ -213,7 +213,7 @@ a{
     margin-bottom:30px;
   }
   .aside h2{
-    font:bold 1.375em Arial, sans-serif; /*22px/16px*/
+    font:bold 1.375em "adelle", Arial, sans-serif; /*22px/16px*/
   }
   .footer{margin-top:30px;}
 }
