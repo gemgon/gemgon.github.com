@@ -125,10 +125,10 @@ a{
     margin-bottom:20px;
   }
   h1{
-    font:normal 2.25em Georgia, serif; /*36px/16px*/
+    font:normal 2.25em "adelle", Georgia, serif; /*36px/16px*/
   }  
   .header h2{
-    font:italic 1.375em Georgia, serif; /*22px/16px*/ 
+    font:italic 1.375em "adelle", Georgia, serif; /*22px/16px*/ 
   }  
   .page h2{
     font:normal 1.125em Arial, sans-serif; /*18px/16px*/
@@ -181,10 +181,10 @@ a{
     float:left;
   }
   h1{
-    font:normal 2.625em Georgia, serif; /*42px/16px*/
+    font:normal 2.625em "adelle", Georgia, serif; /*42px/16px*/
   }
   .header h2{
-    font:italic 1.5em Georgia, serif; /*24px/16px*/ 
+    font:italic 1.5em "adelle", Georgia, serif; /*24px/16px*/ 
   }
   .contact{
     float:right;
