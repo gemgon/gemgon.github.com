@@ -1,0 +1,367 @@
+/*
+  Reset
+--------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size:100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+i, em, blockquote {
+  font-style: italic;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: rgb(255,255,255);
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  background: transparent;
+  border: 0;
+}
+
+img, embed, object, video { 
+  max-width: 100%;
+  height: inherit;
+  _width: 100%;
+}
+
+/*
+  Variables
+--------------------------------------------- */
+$fontSize         :   16;
+$lineHeight       :   24; 
+$fontSizeH1       :   66;
+$moduleH1         :   3; //24*3 = 72
+$fontSizeH2       :   38;
+$moduleH2         :   2; //24*2 = 48
+$fontSizeSmall    :   0;
+$fontSizeImportant:   18;
+$moduleImportant  :   1; //24*1 = 24
+$bgbodycolor      :   #f2f2f2;
+$bgheadercolor    :   #ec6d20; //5f6f83
+$textcolor        :   #333333;
+$bordercolor      :   #fad173; //9cbcd9
+$notescolor       :   #c99a2c; //4a96da
+$linkcolor        :   #2083ec; //a44833
+$linkhovercolor   :   #fad173; //9cbcd9
+$borderlinkcolor  :   #87b8f0; //fbc4b7
+/*
+  Fonts
+--------------------------------------------- */
+
+@font-face {
+    font-family: 'droid_serifregular';
+    src: url('../fonts/droidserif-webfont.eot');
+    src: url('../fonts/droidserif-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidserif-webfont.woff') format('woff'),
+         url('../fonts/droidserif-webfont.ttf') format('truetype'),
+         url('../fonts/droidserif-webfont.svg#droid_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latolight';
+    src: url('../fonts/lato-light-webfont.eot');
+    src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-light-webfont.woff') format('woff'),
+         url('../fonts/lato-light-webfont.ttf') format('truetype'),
+         url('../fonts/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latohairline';
+    src: url('../fonts/lato-hairline-webfont.eot');
+    src: url('../fonts/lato-hairline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-hairline-webfont.woff') format('woff'),
+         url('../fonts/lato-hairline-webfont.ttf') format('truetype'),
+         url('../fonts/lato-hairline-webfont.svg#latohairline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*
+Mixings
+----------------------------------------------*/
+@mixin fontSizeBig($fontInPut,$module) {
+	font-size: $fontInPut+px;
+	font-size: ($fontInPut/$fontSize)+rem;
+	line-height: ($lineHeight*$module/$fontInPut);
+ 	margin-bottom: ($lineHeight/$fontSize)+rem;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+/*
+  Basic styles
+--------------------------------------------- */
+
+body {
+  font-size: $fontSize+px;
+  line-height: $lineHeight/$fontSize;
+  font-family: 'droid_serifregular';
+  text-rendering: 'optimizeLegibility';
+  background-color: $bgbodycolor;
+  color: $textcolor;
+}
+.container {
+  margin: 0 auto;
+  width: ($lineHeight/$fontSize)*30+rem;
+  min-height: 100%;
+}
+header {
+  padding: ($lineHeight/$fontSize)*2+rem 0 ($lineHeight/$fontSize)+rem 0;
+  font-family: 'latohairline';
+  background-color: $bgheadercolor;
+  color: #fff;
+}
+.main {
+  padding: ($lineHeight/$fontSize)+rem 0;
+  background-color: $bgbodycolor;
+  border-bottom: 2px solid $bordercolor;
+}
+footer {
+  padding-top: ($lineHeight/$fontSize)+rem;
+  font-size: .75rem; //12/16 = .75
+  background-color: #fff;
+  color: $notescolor;
+}
+
+h1 {
+  @include fontSizeBig($fontSizeH1,$moduleH1);
+   margin-bottom: 0;
+}
+h2 {
+  @include fontSizeBig($fontSizeH2,$moduleH2);
+  margin-bottom: 0;
+}
+.hidden {
+  display: none;
+}
+p {
+  margin-bottom: ($lineHeight/$fontSize)+rem;
+}
+.highlighted-container {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: $linkcolor;
+  border-bottom: 1px solid $borderlinkcolor;
+  &.highlighted {
+    @include fontSizeBig($fontSizeImportant,$moduleImportant); 
+  }
+  &:hover {
+    border-bottom: 2px solid $bgheadercolor;
+  }
+}
+ul {
+  overflow: hidden;
+  list-style: none;
+  li {
+    float: left;
+    overflow: hidden;
+    width: 48%;
+    margin-bottom: 1.5rem;
+    font-size: .875rem; //14/16 = .875
+    &:nth-child(odd) {
+      margin-right: 4%;
+    }
+    .icon-big {
+      display: block;
+      float: left;
+      height: 5rem; //80/16 = 5
+      width: 5rem;
+      margin-right: 1.25rem; //20/16 = 1.25
+      text-align: center;
+      background-color: #fff;
+      @include border-radius(50%);
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $bgheadercolor;
+    }
+    p {
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+    .span-icon {
+      display: block;
+      margin-top: 1.0625rem; //17/16 = 1.06250000000000000000
+      font-size: 1.875rem; //30/16 = 1.875
+      font-style: normal;
+    }
+  }
+}
+.icon-ux {
+  background: url(../img/icon-ux.png) no-repeat 1.125rem 1rem; //18/16 = 1.125 16/16
+}
+.icon-rwd {
+  background: url(../img/icon-rwd.png) no-repeat .9375rem 1.375rem; //15/16 = .9375 22/16 = 1.375
+}
+.icon-git {
+  background: url(../img/icon-git.png) no-repeat .9375rem .9375rem; //15/16 = .9375 15/16 = .9375
+}
+.icon-rails {
+  background: url(../img/icon-rails.png) no-repeat .9375rem 1.25rem; //15/16 = .9375 20/16 = 1.25
+}
+/*
+  PRINT STYLES
+--------------------------------------------- */
+
+@media print {
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+    header {
+      background-color: $bgbodycolor;
+      color: #000;
+    }
+    .container {
+      width: 95%;
+    }
+    .main {
+      background-color: #fff;
+      border-bottom: 2px solid #ccc;
+    }
+    footer {
+      color: #000;
+    }
+    a {
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+}
+
+/*
+  MAX-WIDTH: 64em 1024px
+--------------------------------------------- */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+  li {
+    margin-bottom: 0;
+  }
+}
+/*
+  MAX-WIDTH: 48em 768px
+--------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  ul li {
+    margin-bottom: 0;
+    p {
+      margin-bottom: 1.5rem;
+    }
+    .icon-big {
+      height: 4.375rem;
+      width: 4.375rem;
+      margin-right: 1rem;
+    }
+    .span-icon {
+      font-size: 1.625rem; //26/16 = 1.625
+      margin-top: 1rem;
+    }
+  }
+  .icon-ux {
+    background: url(../img/icon-ux-s.png) no-repeat .8125rem 1.25rem; // 13/16 = .8125 20/16 = 1.25
+  }
+  .icon-rwd {
+    background: url(../img/icon-rwd-s.png) no-repeat .75rem 1.1875rem; // 12/16 = .75 19/16 = 1.1875
+  }
+  .icon-git {
+    background: url(../img/icon-git-s.png) no-repeat .8125rem .8125rem; // 13/16 = .8125 13/16 = .8125
+  }
+  .icon-rails {
+    background: url(../img/icon-rails-s.png) no-repeat .8125rem 1.25rem; // 13/16 = .8125 20/16 = 1.25
+  }
+}
+/*
+  MAX-WIDTH: 30rem 480px
+--------------------------------------------- */
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  header {
+    padding: 1rem 0 1rem 0;
+    font-family: 'latolight';
+  }
+  h1 {
+    font-size: 3.126rem; //3.126*16 = 50.016 
+  }
+  h2 {
+    font-size: 2rem; //2*16 = 32 
+  }
+  ul li {
+    width: 100%;
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  a.highlighted {
+    font-family: 'latolight'; 
+  }
+  .hidden {
+    display: inline;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    &:hover {
+      border: none;
+    }
+  }
+}
+/*
+  MAX-WIDTH: 20rem 320px 320/16
+--------------------------------------------- */
+@media screen and (max-width: 370px) {
+  h1 {
+    font-size: 2.5rem; //40/16 = 2.5 = 2.375 = 2
+  }
+  h2 {
+    font-size: 1.75rem; //28/16 =  
+  }
+  .visible {
+    display: none;
+  }
+}

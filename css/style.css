@@ -1,232 +1,304 @@
-/*reset inicial*/
+/*
+  Reset
+--------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-body,h1,h2,h3,h4,ul,li,a,img,p,div,label,input,table,tr,td{
-  padding:0;
-  margin:0;
-}
-body{
-  font-size:100%;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #444;
-}
-h1, h2, h3 {
-  color: #222;
-}
-a{
-  text-decoration:none;
-  color:#272727;
-}
-h1 a{color:#000;}
-li{
-  list-style-type:none;
-}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
-/* General Styles
------------------------------------------------------------------------- */
-body{
-  background-repeat: repeat-x;
-}
-.header{
-  padding-bottom:10px;
-}
-.page h2{
-  width:95%;
-  margin-bottom:5px; 
-  border-bottom:1px solid #F3A22A;
-}
-.page p{
-  width:95%;
-  margin-bottom:20px; 
-}
-h3{
-  margin-bottom:18px;
-  font:bold 1.125em Arial, sans-serif; /*18px/16px*/
-}
-h4{font:bold 1em Arial, sans-serif; /*16px/16px*/}
-h4 a{
-  font-weight:normal;
-  font-size:.75em;/*12/16 =*/ 
-  text-transform:uppercase;
-}
-.aside h2{
-  margin-bottom:5px;
-  border-bottom:none;  
-}
-.aside .skills ul li {
-  overflow:hidden;
-  height:28px;
-  line-height:28px;
-}
-.aside .skills ul li img {
-  float:right;
-  clear:right;
-}
-.aside .skills ul li img.small{
-  margin-right:30px;
-  /* margin-right:16.190476190476190476%;*/ /*34px/210px */
-}
-.aside .last{
-  margin-bottom:20px;  
-}
-.aside .links li{
-  display:inline;
-}
-.course_container{margin-left:3%;}
-.course_container.last{margin-bottom:30px;}
-.course_container img{
-  float:left;
-  vertical-align:center;
-  margin-right:10px;
-  height:18px;
-}
-.course_container p{margin-left:28px}
-.three_column{
-  overflow:hidden;
-  margin-left:3%;
-}
-.three_column li{
-  float:left;
-  display:inline;
-  width:150px;
-  margin-right:3%;
-  margin-bottom:10px;
-}
-.three_column h4{
-  text-align:center;
-  margin-bottom:10px;
-}
-.thumb{
-  border:4px solid #dcd9d2; /*para hover probar #83c0f8*/
-  border-radius:4px;  
-}
-.footer{
-  clear:both;
-}
-.footer p{
-  text-align:center;
-  color:#221606;
-  font:normal .75em Arial, sans-serif; /*12px/16px*/
-}
-a{
-  color:#A66300;
-}
-/* smartphone e iphone landscape
------------------------------------------------------------------------- */
+strong, b {
+  font-weight: bold; }
 
-@media only screen and (max-width: 734px) {
-  body{
-    background-image:url(../img/background_2.png);
-  }
-  #wrapper{
-    margin:10px auto;
-    width:90%;
-  }
-  .header{
-    margin-bottom:20px;
-  }
-  h1{
-    font:normal 2.25em "adelle", Georgia, serif; /*36px/16px*/
-  }  
-  .header h2{
-    font:italic 1.375em "adelle", Georgia, serif; /*22px/16px*/ 
-  }  
-  .page h2{
-    font:normal 1.125em "adelle", Arial, sans-serif; /*18px/16px*/
-    line-height: 1.22222222222222222222em; /*22px/18px*/
-  }
-  .page p{
-    font:normal .75em Arial, sans-serif; /*12px/16px*/ 
-    line-height: 1.5em;   
-  }
-  .aside{ 
-    margin-bottom:20px;
-  }
-  .aside h2{
-    font:bold 1.375em "adelle", Arial, sans-serif; /*22px/16px*/
-  }
-  .skills{
-    width:30%;
-  }  
-  .footer{margin-top:20px;}
-}
+i, em, blockquote {
+  font-style: italic; }
 
-/*Ajuste para .skills y h4 a en pantallas pequeñas
--------------------------------------------------------------------------*/
-@media only screen and (max-width: 530px){
-  .skills{width:46%;}  
-  h4 a{
-    display:block;
-    margin-left:28px;
-    }
-}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: white; }
 
-/* Desktop y tablets
------------------------------------------------------------------------- */
+img {
+  -ms-interpolation-mode: bicubic;
+  background: transparent;
+  border: 0; }
 
-@media screen and (min-width: 735px) {
-  
-  body{
-    background-image:url(../img/background.png);
-  }
+img, embed, object, video {
+  max-width: 100%;
+  height: inherit;
+  _width: 100%; }
 
-  #wrapper{
-    margin:30px auto;
-    width:70%;
-  }
-  .header{
-    margin-bottom:30px;
-    overflow:hidden;
-  }
-  .logo{
-    float:left;
-  }
-  h1{
-    font:normal 2.625em "adelle", Georgia, serif; /*42px/16px*/
-  }
-  .header h2{
-    font:italic 1.5em "adelle", Georgia, serif; /*24px/16px*/ 
-  }
-  .contact{
-    float:right;
-    margin-top:55px;
-  }
-  .page{
-    clear:both;
-    overflow:hidden;
-    width:100%;
-  }
-  .main{
-    float:left;
-    width:61.4634146%;  /*504px/820px*/
-  }
-  .page h2{
-    font:normal 1.25em "adelle", Arial, sans-serif; /*20px/16px*/
-    line-height:1.2em; /*24px/20px*/ 
-  }
-  .page p{
-    font:normal .875em Arial, sans-serif; /*14px/16px*/ 
-    line-height:1.5em;   
-  }
-  .aside{
-    float:right;
-    width:31.707317073170731707%;  /*260px/820px*/  
-    margin-bottom:30px;
-  }
-  .aside h2{
-    font:bold 1.375em "adelle", Arial, sans-serif; /*22px/16px*/
-  }
-  .footer{margin-top:30px;}
-}
+/*
+  Variables
+--------------------------------------------- */
+/*
+  Fonts
+--------------------------------------------- */
+@font-face {
+  font-family: 'droid_serifregular';
+  src: url("../fonts/droidserif-webfont.eot");
+  src: url("../fonts/droidserif-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/droidserif-webfont.woff") format("woff"), url("../fonts/droidserif-webfont.ttf") format("truetype"), url("../fonts/droidserif-webfont.svg#droid_serifregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-/* Large Screens
------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'latolight';
+  src: url("../fonts/lato-light-webfont.eot");
+  src: url("../fonts/lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-light-webfont.woff") format("woff"), url("../fonts/lato-light-webfont.ttf") format("truetype"), url("../fonts/lato-light-webfont.svg#latolight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
-@media screen and (min-width: 1152px) {
-  #wrapper {
-    width: 800px;
-    }
-  .aside {
-    width:210px;
-  }
-}
+@font-face {
+  font-family: 'latohairline';
+  src: url("../fonts/lato-hairline-webfont.eot");
+  src: url("../fonts/lato-hairline-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-hairline-webfont.woff") format("woff"), url("../fonts/lato-hairline-webfont.ttf") format("truetype"), url("../fonts/lato-hairline-webfont.svg#latohairline") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
+/*
+Mixings
+----------------------------------------------*/
+/*
+  Basic styles
+--------------------------------------------- */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'droid_serifregular';
+  text-rendering: 'optimizeLegibility';
+  background-color: #f2f2f2;
+  color: #333333; }
+
+.container {
+  margin: 0 auto;
+  width: 45rem;
+  min-height: 100%; }
+
+header {
+  padding: 3rem 0 1.5rem 0;
+  font-family: 'latohairline';
+  background-color: #ec6d20;
+  color: #fff; }
+
+.main {
+  padding: 1.5rem 0;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #fad173; }
+
+footer {
+  padding-top: 1.5rem;
+  font-size: .75rem;
+  background-color: #fff;
+  color: #c99a2c; }
+
+h1 {
+  font-size: 66px;
+  font-size: 4.125rem;
+  line-height: 1.09091;
+  margin-bottom: 1.5rem;
+  margin-bottom: 0; }
+
+h2 {
+  font-size: 38px;
+  font-size: 2.375rem;
+  line-height: 1.26316;
+  margin-bottom: 1.5rem;
+  margin-bottom: 0; }
+
+.hidden {
+  display: none; }
+
+p {
+  margin-bottom: 1.5rem; }
+
+.highlighted-container {
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: #2083ec;
+  border-bottom: 1px solid #87b8f0; }
+  a.highlighted {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    margin-bottom: 1.5rem; }
+  a:hover {
+    border-bottom: 2px solid #ec6d20; }
+
+ul {
+  overflow: hidden;
+  list-style: none; }
+  ul li {
+    float: left;
+    overflow: hidden;
+    width: 48%;
+    margin-bottom: 1.5rem;
+    font-size: .875rem; }
+    ul li:nth-child(odd) {
+      margin-right: 4%; }
+    ul li .icon-big {
+      display: block;
+      float: left;
+      height: 5rem;
+      width: 5rem;
+      margin-right: 1.25rem;
+      text-align: center;
+      background-color: #fff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+    ul li h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #ec6d20; }
+    ul li p {
+      overflow: hidden;
+      margin-bottom: 0; }
+    ul li .span-icon {
+      display: block;
+      margin-top: 1.0625rem;
+      font-size: 1.875rem;
+      font-style: normal; }
+
+.icon-ux {
+  background: url(../img/icon-ux.png) no-repeat 1.125rem 1rem; }
+
+.icon-rwd {
+  background: url(../img/icon-rwd.png) no-repeat 0.9375rem 1.375rem; }
+
+.icon-git {
+  background: url(../img/icon-git.png) no-repeat 0.9375rem 0.9375rem; }
+
+.icon-rails {
+  background: url(../img/icon-rails.png) no-repeat 0.9375rem 1.25rem; }
+
+/*
+  PRINT STYLES
+--------------------------------------------- */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000; }
+
+  header {
+    background-color: #f2f2f2;
+    color: #000; }
+
+  .container {
+    width: 95%; }
+
+  .main {
+    background-color: #fff;
+    border-bottom: 2px solid #ccc; }
+
+  footer {
+    color: #000; }
+
+  a {
+    color: #000;
+    border-bottom: 1px solid #000; } }
+/*
+  MAX-WIDTH: 64em 1024px
+--------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 70%; }
+
+  li {
+    margin-bottom: 0; } }
+/*
+  MAX-WIDTH: 48em 768px
+--------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%; }
+
+  ul li {
+    margin-bottom: 0; }
+    ul li p {
+      margin-bottom: 1.5rem; }
+    ul li .icon-big {
+      height: 4.375rem;
+      width: 4.375rem;
+      margin-right: 1rem; }
+    ul li .span-icon {
+      font-size: 1.625rem;
+      margin-top: 1rem; }
+
+  .icon-ux {
+    background: url(../img/icon-ux-s.png) no-repeat 0.8125rem 1.25rem; }
+
+  .icon-rwd {
+    background: url(../img/icon-rwd-s.png) no-repeat 0.75rem 1.1875rem; }
+
+  .icon-git {
+    background: url(../img/icon-git-s.png) no-repeat 0.8125rem 0.8125rem; }
+
+  .icon-rails {
+    background: url(../img/icon-rails-s.png) no-repeat 0.8125rem 1.25rem; } }
+/*
+  MAX-WIDTH: 30rem 480px
+--------------------------------------------- */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5; }
+
+  header {
+    padding: 1rem 0 1rem 0;
+    font-family: 'latolight'; }
+
+  h1 {
+    font-size: 3.126rem; }
+
+  h2 {
+    font-size: 2rem; }
+
+  ul li {
+    width: 100%; }
+    ul li p {
+      margin-bottom: 2rem; }
+
+  a.highlighted {
+    font-family: 'latolight'; }
+
+  .hidden {
+    display: inline;
+    font-size: 1rem;
+    border: none;
+    color: #fff; }
+    .hidden:hover {
+      border: none; } }
+/*
+  MAX-WIDTH: 20rem 320px 320/16
+--------------------------------------------- */
+@media screen and (max-width: 370px) {
+  h1 {
+    font-size: 2.5rem; }
+
+  h2 {
+    font-size: 1.75rem; }
+
+  .visible {
+    display: none; } }
