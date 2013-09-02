@@ -35,6 +35,10 @@ i, em, blockquote {
   font-style: italic;
 }
 
+ul {
+  list-style: none;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -186,43 +190,50 @@ a {
     border-bottom: 2px solid $bgheadercolor;
   }
 }
-ul {
+
+.main-list:before, .main-list:after {
+  content: "";
+  display: table;
+}
+.main-list:after {
+  clear: both;
+}
+.main-list {
+  *zoom: 1;
+}
+.main-list li {
+  float: left;
   overflow: hidden;
-  list-style: none;
-  li {
+  width: 48%;
+  margin-bottom: 1.5rem;
+  font-size: .875rem; //14/16 = .875
+  &:nth-child(odd) {
+    margin-right: 4%;
+  }
+  .icon-big {
+    display: block;
     float: left;
+    height: 5rem; //80/16 = 5
+    width: 5rem;
+    margin-right: 1.25rem; //20/16 = 1.25
+    text-align: center;
+    background-color: #fff;
+    @include border-radius(50%);
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $bgheadercolor;
+  }
+  p {
     overflow: hidden;
-    width: 48%;
-    margin-bottom: 1.5rem;
-    font-size: .875rem; //14/16 = .875
-    &:nth-child(odd) {
-      margin-right: 4%;
-    }
-    .icon-big {
-      display: block;
-      float: left;
-      height: 5rem; //80/16 = 5
-      width: 5rem;
-      margin-right: 1.25rem; //20/16 = 1.25
-      text-align: center;
-      background-color: #fff;
-      @include border-radius(50%);
-    }
-    h3 {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: $bgheadercolor;
-    }
-    p {
-      overflow: hidden;
-      margin-bottom: 0;
-    }
-    .span-icon {
-      display: block;
-      margin-top: 1.0625rem; //17/16 = 1.06250000000000000000
-      font-size: 1.875rem; //30/16 = 1.875
-      font-style: normal;
-    }
+    margin-bottom: 0;
+  }
+  .span-icon {
+    display: block;
+    margin-top: 1.0625rem; //17/16 = 1.06250000000000000000
+    font-size: 1.875rem; //30/16 = 1.875
+    font-style: normal;
   }
 }
 .icon-ux {
@@ -274,9 +285,6 @@ ul {
   .container {
     width: 70%;
   }
-  li {
-    margin-bottom: 0;
-  }
 }
 /*
   MAX-WIDTH: 48em 768px
@@ -285,7 +293,7 @@ ul {
   .container {
     width: 95%;
   }
-  ul li {
+  .main-list li {
     margin-bottom: 0;
     p {
       margin-bottom: 1.5rem;
@@ -332,7 +340,7 @@ ul {
   h2 {
     font-size: 2rem; //2*16 = 32 
   }
-  ul li {
+  .main-list li {
     width: 100%;
     p {
       margin-bottom: 2rem;
