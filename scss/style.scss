@@ -206,7 +206,6 @@ a {
   overflow: hidden;
   width: 48%;
   margin-bottom: 1.5rem;
-  font-size: .875rem; //14/16 = .875
   &:nth-child(odd) {
     margin-right: 4%;
   }
@@ -226,6 +225,8 @@ a {
     color: $bgheadercolor;
   }
   p {
+    font-size: .875rem; //14/16 = .875
+    line-height: ($lineHeight / 14) / ($lineHeight / $fontSize) + rem;
     overflow: hidden;
     margin-bottom: 0;
   }

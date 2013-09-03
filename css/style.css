@@ -161,8 +161,7 @@ a {
   float: left;
   overflow: hidden;
   width: 48%;
-  margin-bottom: 1.5rem;
-  font-size: .875rem; }
+  margin-bottom: 1.5rem; }
   .main-list li:nth-child(odd) {
     margin-right: 4%; }
   .main-list li .icon-big {
@@ -183,6 +182,8 @@ a {
     font-weight: bold;
     color: #ec6d20; }
   .main-list li p {
+    font-size: .875rem;
+    line-height: 1.14286rem;
     overflow: hidden;
     margin-bottom: 0; }
   .main-list li .span-icon {
