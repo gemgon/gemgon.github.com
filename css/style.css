@@ -145,16 +145,22 @@ a {
     line-height: 1.33333;
     margin-bottom: 1.5rem; }
   a:hover {
-    border-bottom: 2px solid #ec6d20; }
+    border-bottom: 2px solid #87b8f0; }
 
-.main-list:before, .main-list:after {
+/*.main-list module*/
+.main-list:before,
+.main-list:after,
+.tag-list:before,
+.tag-list:after {
   content: "";
   display: table; }
 
-.main-list:after {
+.main-list:after,
+.tag-list:after {
   clear: both; }
 
-.main-list {
+.main-list,
+.tag-list {
   *zoom: 1; }
 
 .main-list li {
@@ -203,6 +209,50 @@ a {
 
 .icon-rails {
   background: url(../img/icon-rails.png) no-repeat 0.9375rem 1.25rem; }
+
+/*.work module*/
+.work {
+  padding-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: .3125rem solid #fff; }
+  .work h3 {
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.84615;
+    margin-bottom: 1.5rem;
+    margin-bottom: 0; }
+  .work .img-link {
+    border: none; }
+
+.last-work {
+  margin-bottom: 0;
+  border-bottom: none; }
+
+.tag-list {
+  margin-bottom: 1rem; }
+
+.tag {
+  float: left;
+  position: relative;
+  margin: 0 1.5rem .5rem 0;
+  padding: 0 1rem 0 1.5rem;
+  font-size: .875rem;
+  line-height: 1.4rem;
+  background-color: #fce8b9;
+  border-top-left-radius: 3.125rem;
+  border-bottom-left-radius: 3.125rem;
+  border: 0.0625rem #fad173 solid;
+  color: #996e08; }
+
+.tag-hole {
+  position: absolute;
+  top: .45rem;
+  left: 0.5rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 3.125rem;
+  background-color: #f2f2f2;
+  border: 0.0625rem #fad173 solid; }
 
 /*
   PRINT STYLES

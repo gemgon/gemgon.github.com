@@ -66,7 +66,9 @@ $fontSizeH1       :   66;
 $moduleH1         :   3; //24*3 = 72
 $fontSizeH2       :   38;
 $moduleH2         :   2; //24*2 = 48
-$fontSizeSmall    :   0;
+$fontSizeH3       :   26;
+$moduleH3         :   2;
+$fontSizeSmall    :   10;
 $fontSizeImportant:   18;
 $moduleImportant  :   1; //24*1 = 24
 $bgbodycolor      :   #f2f2f2;
@@ -77,6 +79,8 @@ $notescolor       :   #c99a2c; //4a96da
 $linkcolor        :   #2083ec; //a44833
 $linkhovercolor   :   #fad173; //9cbcd9
 $borderlinkcolor  :   #87b8f0; //fbc4b7
+$bgtagcolor       :   #fce8b9;
+$tagcolor         :   #996e08;
 /*
   Fonts
 --------------------------------------------- */
@@ -187,18 +191,23 @@ a {
     @include fontSizeBig($fontSizeImportant,$moduleImportant); 
   }
   &:hover {
-    border-bottom: 2px solid $bgheadercolor;
+    border-bottom: 2px solid $borderlinkcolor;
   }
 }
-
-.main-list:before, .main-list:after {
+/*.main-list module*/
+.main-list:before, 
+.main-list:after,
+.tag-list:before,
+.tag-list:after {
   content: "";
   display: table;
 }
-.main-list:after {
+.main-list:after,
+.tag-list:after {
   clear: both;
 }
-.main-list {
+.main-list,
+.tag-list {
   *zoom: 1;
 }
 .main-list li {
@@ -226,7 +235,7 @@ a {
   }
   p {
     font-size: .875rem; //14/16 = .875
-    line-height: ($lineHeight / 14) / ($lineHeight / $fontSize) + rem;
+    line-height: ($lineHeight/14)/($lineHeight/$fontSize)+rem;
     overflow: hidden;
     margin-bottom: 0;
   }
@@ -248,6 +257,49 @@ a {
 }
 .icon-rails {
   background: url(../img/icon-rails.png) no-repeat .9375rem 1.25rem; //15/16 = .9375 20/16 = 1.25
+}
+/*.work module*/
+.work {
+  padding-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: .3125rem solid #fff; //5/16 = .3125
+  h3 {
+    @include fontSizeBig($fontSizeH3,$moduleH3);
+    margin-bottom: 0;
+  }
+  .img-link {
+    border: none;
+  }
+}
+.last-work {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.tag-list {
+  margin-bottom: 1rem;
+}
+.tag {
+  float: left;
+  position: relative;
+  margin: 0 1.5rem .5rem 0;
+  padding: 0 1rem 0 1.5rem;
+  font-size: .875rem; //14/16 = .875
+  line-height: 1.4rem;
+  background-color: $bgtagcolor;
+  border-top-left-radius: 3.125rem; //50/16 = 3.125
+  border-bottom-left-radius: 3.125rem; //50/16 = 3.125
+  border: .0625rem $bordercolor solid; //1/16 = .0625
+  color: $tagcolor;
+}
+.tag-hole {
+  position: absolute;
+  top: .45rem;
+  left: 0.5rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 3.125rem; //50/16 = 3.125
+  background-color: $bgbodycolor;
+  border: .0625rem $bordercolor solid;
 }
 /*
   PRINT STYLES
