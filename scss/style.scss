@@ -271,9 +271,8 @@ a {
     border: none;
   }
 }
-.last-work {
-  margin-bottom: 0;
-  border-bottom: none;
+.first-work {
+  border-top: .3125rem solid #fff; //5/16 = .3125
 }
 .tag-list {
   margin-bottom: 1rem;

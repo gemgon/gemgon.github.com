@@ -224,9 +224,8 @@ a {
   .work .img-link {
     border: none; }
 
-.last-work {
-  margin-bottom: 0;
-  border-bottom: none; }
+.first-work {
+  border-top: .3125rem solid #fff; }
 
 .tag-list {
   margin-bottom: 1rem; }
