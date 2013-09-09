@@ -100,6 +100,11 @@ header {
   font-family: 'latohairline';
   background-color: #ec6d20;
   color: #fff; }
+  header a {
+    color: #fff;
+    border: none; }
+    header a:hover {
+      border: none; }
 
 .main {
   padding: 1.5rem 0;
@@ -277,13 +282,25 @@ a {
 
   a {
     color: #000;
-    border-bottom: 1px solid #000; } }
+    border-bottom: 1px solid #000; }
+
+  .tag {
+    background-color: #fff;
+    border: #000;
+    color: #000; }
+
+  .tag-hole {
+    background-color: #fff;
+    border: #000; } }
 /*
   MAX-WIDTH: 64em 1024px
 --------------------------------------------- */
 @media screen and (max-width: 1024px) {
   .container {
-    width: 70%; } }
+    width: 70%; }
+
+  .tag {
+    margin-right: .5rem; } }
 /*
   MAX-WIDTH: 48em 768px
 --------------------------------------------- */

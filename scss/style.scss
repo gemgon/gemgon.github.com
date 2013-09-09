@@ -153,6 +153,13 @@ header {
   font-family: 'latohairline';
   background-color: $bgheadercolor;
   color: #fff;
+  a {
+    color: #fff;
+    border: none;
+    &:hover {
+      border: none;
+    }
+  }
 }
 .main {
   padding: ($lineHeight/$fontSize)+rem 0;
@@ -327,6 +334,15 @@ a {
       color: #000;
       border-bottom: 1px solid #000;
     }
+    .tag {
+      background-color: #fff;
+      border: #000;
+      color: #000;
+    }
+    .tag-hole {
+      background-color: #fff;
+      border: #000;
+    }
 }
 
 /*
@@ -336,6 +352,9 @@ a {
 @media screen and (max-width: 1024px) {
   .container {
     width: 70%;
+  }
+  .tag {
+    margin-right: .5rem;
   }
 }
 /*
